@@ -1,0 +1,40 @@
+body{
+    background-color: aquamarine;
+}
+
+.container {
+    background: lightgoldenrodyellow;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: lightslategray;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 2em;
+    color: #555;
+}

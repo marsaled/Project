@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import Dashboard from './Components/Dashboard/Dashboard';
+import RegisterStudent from './Components/RegisterStudent/RegisterStudent';
+import MarkAttendance from './Components/MarkAttendance/MarkAttendance';
+import AttendanceReport from './Components/AttendanceReport/AttendanceReport';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Layout />
+                <Routes>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/register" element={<RegisterStudent />} />
+                    <Route path="/mark" element={<MarkAttendance />} />
+                    <Route path="/report" element={<AttendanceReport />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
